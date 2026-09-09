@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import type { LucideIcon } from 'lucide-react'
 import { LayoutDashboard, Network, Lightbulb, FileText, ShieldCheck, Settings, Search, Bell, ChevronDown, ArrowUpRight, Sparkles, DollarSign, Zap, CircleAlert, CheckCircle2 } from 'lucide-react'
 
 const spend = [
@@ -12,7 +13,7 @@ const opportunities = [
   ['Right-size GPU inference cluster','ML Platform','€28,700','Medium'],
   ['Cache repeated requests','Customer AI','€19,240','High'],
 ]
-const nav = [
+const nav: Array<[string, LucideIcon]> = [
   ['Overview',LayoutDashboard],['Explore spend',Search],['AI hierarchy',Network],['Optimization',Lightbulb],['Reports',FileText],['Governance',ShieldCheck]
 ]
 
@@ -26,7 +27,7 @@ export default function Home() {
     <aside className="sidebar">
       <div className="brand"><div className="logo">C</div><span>costra</span></div>
       <div className="workspace"><div className="avatar">AC</div><div><strong>Acme Corporation</strong><small>Enterprise workspace</small></div><ChevronDown size={15}/></div>
-      <nav>{nav.map(([label,Icon]) => <button key={label} className={active===label?'active':''} onClick={()=>setActive(label as string)}><Icon size={18}/><span>{label}</span>{label==='Optimization'&&<b>27</b>}</button>)}</nav>
+      <nav>{nav.map(([label,Icon]) => <button key={label} className={active===label?'active':''} onClick={()=>setActive(label)}><Icon size={18}/><span>{label}</span>{label==='Optimization'&&<b>27</b>}</button>)}</nav>
       <div className="sidebarBottom"><button><Settings size={18}/>Settings</button><div className="user"><div className="avatar dark">MK</div><div><strong>Martin</strong><small>Admin</small></div><ChevronDown size={15}/></div></div>
     </aside>
 
