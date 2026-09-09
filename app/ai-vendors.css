@@ -1,31 +1,54 @@
-.lightSection:after{
-  content:"CONNECT YOUR AI VENDORS\A\AConnect Costra to the AI APIs and billing data your teams already use.\A\AOpenAI   ·   Anthropic   ·   Google   ·   Microsoft   ·   AWS   ·   Mistral\A\AUsage   ·   Tokens   ·   Requests   ·   Models   ·   Spend";
-  white-space:pre-line;
-  display:block;
-  max-width:920px;
-  margin:58px auto 0;
-  padding:34px 42px 32px;
-  border:1px solid #dfe5e1;
-  border-radius:14px;
-  background:#fff;
-  color:#68736e;
-  text-align:center;
-  font-size:11px;
-  line-height:2;
-  box-shadow:0 12px 32px #1c2a2109;
-}
-.lightSection:after::first-line{
-  color:#18201d;
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.15em;
+.lightSection:after{display:none}
+
+.aiVendorSection{margin:76px auto 0;max-width:1116px;padding-top:76px;border-top:1px solid #e1e6e3}
+.aiVendorIntro{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;margin-bottom:34px}
+.aiVendorIntro .kicker{margin-bottom:14px}
+.aiVendorIntro h3{margin:0;color:#18201d;font-size:31px;line-height:1.12;letter-spacing:-.035em;font-weight:650}
+.aiVendorIntro h3 span{color:#7b8681;font-weight:500}
+.aiVendorIntro>p{margin:0;max-width:470px;justify-self:end;color:#68736e;font-size:13px;line-height:1.75}
+.aiVendorGrid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.aiVendorCard{position:relative;min-height:142px;padding:17px 15px 14px;border:1px solid #dfe5e1;border-radius:12px;background:#fff;box-shadow:0 8px 24px #1c2a2108;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.aiVendorCard:hover{transform:translateY(-3px);border-color:#cbd5d0;box-shadow:0 16px 32px #1c2a2110}
+.vendorMark{width:34px;height:34px;border:1px solid #dfe5e1;border-radius:9px;display:flex;align-items:center;justify-content:center;background:#f8faf9;color:#18201d;font-size:16px;font-weight:700;letter-spacing:-.04em}
+.vendor-openai{font-family:Arial,sans-serif;font-weight:500}
+.vendor-anthropic{font-family:Georgia,serif;font-size:19px}
+.vendor-google{font-family:Arial,sans-serif;font-weight:600}
+.vendor-microsoft{font-family:Arial,sans-serif;font-size:14px}
+.vendor-aws{font-size:11px;letter-spacing:-.08em}
+.vendor-mistral{font-family:Arial,sans-serif;font-size:15px}
+.vendorInfo{display:flex;flex-direction:column;margin-top:15px;gap:3px}
+.vendorInfo strong{font-size:12px;color:#18201d;font-weight:700}
+.vendorInfo span{font-size:10px;color:#8a948f}
+.vendorSignal{position:absolute;left:15px;right:15px;bottom:13px}
+.vendorSignal>span{display:block;font-size:8px;color:#8a948f;margin-bottom:7px;white-space:nowrap}
+.vendorSignal div{height:18px;display:flex;align-items:end;gap:3px}
+.vendorSignal i{display:block;width:9px;border-radius:2px 2px 0 0;background:#dce4df}
+.vendorSignal i:nth-child(1){height:7px}.vendorSignal i:nth-child(2){height:11px}.vendorSignal i:nth-child(3){height:8px}.vendorSignal i:nth-child(4){height:15px}.vendorSignal i:nth-child(5){height:12px}
+.vendorCheck{position:absolute;top:19px;right:15px;color:#718079}
+.aiDataFlow{display:grid;grid-template-columns:1fr 34px 1fr 48px 1.08fr;gap:12px;align-items:center;margin-top:34px;padding:18px;border:1px solid #dfe5e1;border-radius:14px;background:#f8faf9}
+.flowNode,.flowResult{display:flex;align-items:center;gap:12px;min-width:0}
+.flowIcon{width:36px;height:36px;flex:0 0 36px;border-radius:10px;display:flex;align-items:center;justify-content:center;border:1px solid #dfe5e1;background:#fff;color:#18201d}
+.flowNode b,.flowResult b{display:block;color:#18201d;font-size:11px;font-weight:700}
+.flowNode small,.flowResult small{display:block;margin-top:3px;color:#8a948f;font-size:9px;white-space:nowrap}
+.flowLine{display:flex;justify-content:center;align-items:center}
+.flowLine span{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #dfe5e1;color:#7b8681;font-size:15px}
+.flowArrow{display:flex;justify-content:center;color:#7b8681}
+.flowResult{padding-left:2px}
+.flowSpark{width:72px;height:28px;flex:0 0 72px;color:#5f6d66}
+@media(max-width:900px){
+  .aiVendorGrid{grid-template-columns:repeat(3,1fr)}
+  .aiVendorIntro{gap:36px}
+  .aiDataFlow{grid-template-columns:1fr 30px 1fr}
+  .flowArrow{display:none}.flowResult{grid-column:1/-1;padding-top:8px;border-top:1px solid #e1e6e3}
 }
 @media(max-width:560px){
-  .lightSection:after{
-    max-width:none;
-    margin-top:40px;
-    padding:26px 18px;
-    font-size:9px;
-    line-height:1.9;
-  }
+  .aiVendorSection{margin-top:52px;padding-top:52px}
+  .aiVendorIntro{grid-template-columns:1fr;gap:18px;margin-bottom:24px}
+  .aiVendorIntro>p{justify-self:start;font-size:12px}
+  .aiVendorIntro h3{font-size:27px}
+  .aiVendorGrid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .aiVendorCard{min-height:136px}
+  .aiDataFlow{grid-template-columns:1fr;gap:10px;padding:14px}
+  .flowLine{height:24px}.flowLine span{transform:rotate(90deg)}
+  .flowResult{padding-top:12px}
 }
