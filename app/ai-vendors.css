@@ -1,0 +1,28 @@
+.lightSection:after{
+  content:"CONNECT YOUR AI VENDORS\\A\\AConnect Costra to the AI APIs and billing data your teams already use.\\A\\AOpenAI   ·   Anthropic   ·   Google   ·   Microsoft   ·   AWS   ·   Mistral\\A\\AUsage   ·   Tokens   ·   Requests   ·   Models   ·   Spend";
+  white-space:pre-line;
+  display:block;
+  max-width:1116px;
+  margin:26px auto 0;
+  padding:30px 32px;
+  border:1px solid #dfe5e1;
+  border-radius:12px;
+  background:#fff;
+  color:#68736e;
+  font-size:11px;
+  line-height:1.9;
+  box-shadow:0 8px 24px #1c2a2108;
+}
+.lightSection:after::first-line{
+  color:#18201d;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.13em;
+}
+@media(max-width:560px){
+  .lightSection:after{
+    margin-top:18px;
+    padding:22px 18px;
+    font-size:9px;
+  }
+}
