@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import './roles.css'
+import './ai-vendors.css'
 
 export const metadata: Metadata = {
   title: 'Costra — AI Cost Intelligence for Modern Enterprises',
